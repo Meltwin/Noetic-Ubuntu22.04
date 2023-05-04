@@ -119,5 +119,5 @@ If you want to install noetic in the working folder, run the installation with:
 
 If you want to install noetic in */opt/ros/noetic* you can follow these steps:
 
-1. Run ```shell sudo mkdir /opt/ros/noetic```
-2. Run ```shell sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/noetic```
+1. Run ```sudo mkdir /opt/ros/noetic```
+2. Run ```sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/noetic```
