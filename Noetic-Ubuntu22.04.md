@@ -87,8 +87,8 @@ To fix that you need to follow the changes suggested on [this PR](https://github
 and especially [this commit](https://github.com/ros/rosconsole/pull/54/commits/9f930c007dd40aa7ede771b8859b529e024d7bfb).
 Here is a quick summary of what to do:
 - Open **src/rosconsole/src/rosconsole/impl/rosconsole_log4cxx.cpp** and replace its content by [this version of the file](https://raw.githubusercontent.com/ros/rosconsole/9f930c007dd40aa7ede771b8859b529e024d7bfb/src/rosconsole/impl/rosconsole_log4cxx.cpp)
-- (Optional) Same thing with **src/rosconsole/test/thread_test.cpp** with [this version](https://raw.githubusercontent.com/ros/rosconsole/9f930c007dd40aa7ede771b8859b529e024d7bfb/test/thread_test.cpp)
-- (Optional) Same thing with **src/rosconsole/test/utest.cpp** with [this version](https://raw.githubusercontent.com/ros/rosconsole/9f930c007dd40aa7ede771b8859b529e024d7bfb/test/utest.cpp)
+- Same thing with **src/rosconsole/test/thread_test.cpp** with [this version](https://raw.githubusercontent.com/ros/rosconsole/9f930c007dd40aa7ede771b8859b529e024d7bfb/test/thread_test.cpp)
+- Same thing with **src/rosconsole/test/utest.cpp** with [this version](https://raw.githubusercontent.com/ros/rosconsole/9f930c007dd40aa7ede771b8859b529e024d7bfb/test/utest.cpp)
 
 ##### 2.1.2.C - Fixing *std::share_mutex* error
 
