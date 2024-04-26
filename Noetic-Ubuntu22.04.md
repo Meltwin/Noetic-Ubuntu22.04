@@ -18,7 +18,8 @@ sudo apt-get install python3-rosdep python3-rosinstall-generator python3-vcstool
 The first problem that you will encounter while following the official guide is the lacking of some packages on the apt.
 In order to resolve this problem, do these steps:
 
-1. Modify */etc/ros/rosdep/sources.list.d/20-default.list* as following: 
+1. Init rosdep: `sudo rosdep init`
+2. Modify */etc/ros/rosdep/sources.list.d/20-default.list* as following: 
 ```YAML
 # os-specific listings first
 yaml https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/osx-homebrew.yaml osx
@@ -34,9 +35,25 @@ gbpdistro https://raw.githubusercontent.com/ros/rosdistro/master/releases/fuerte
 2. Go to [this gist](https://gist.github.com/Meltwin/0317ae7481c94da7fd66c3eea8d40740) and click **Raw**. Replace **\<enter base.yaml address\>** in the file by the address of the raw file.
 4. Save the file (require sudo rights).
 
+## 1.Y - HDDTemp can't be found
+
+It can happens that the package **hddtemp** can't be found with an error message similar to this:
+
+```
+diagnostic_common_diagnostics: [hddtemp] defined as "not available" for OS version [*]
+```
+
+For Ubuntu 22.04, it is possible to install it thanks to an online archive. The solution I found was on this [StackOverflow post](https://askubuntu.com/a/1438779). What you have to do is:
+
+```
+sudo add-apt-repository ppa:malcscott/ppa
+sudo apt update 
+sudo apt install hddtemp
+
+```
+
 ### 1.2 - Initializing rosdep
 ```shell
-sudo rosdep init
 rosdep update
 ```
 
@@ -65,7 +82,7 @@ rosdep install --from-paths ./src --ignore-packages-from-source --rosdistro noet
 ```
 
 If you are on another distro than classical Ubuntu/Kubuntu/Xubuntu (e.g. Manjaro, Mint, ...), 
-add ```--distro=ubuntu:jammy``` at the end of the precendent command:
+add ```--os=ubuntu:jammy``` at the end of the precendent command:
 
 #### 2.1.2 - Building the catkin Workspace
 
