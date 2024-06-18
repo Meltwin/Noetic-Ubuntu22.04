@@ -1,3 +1,12 @@
+---
+
+<p align="center">This repository was made to clean a bit discussions below the original gist (available <a href="https://gist.github.com/Meltwin/fe2c15a5d7e6a8795911907f627255e0">here</a>) so that people can find the problem more quickly. If you have any problem with the steps below, please:</p>
+
+1. Check if someone else had the same problem below the gist,
+2. Create an issue otherwise.
+
+---
+
 The process is pretty similar to the standard [installation from source](http://wiki.ros.org/noetic/Installation/Source) except
 for some fixes that you will have to make during the installation. 
 I will keep the same header so you can keep a track on both guide at the same time (follow the official website 
